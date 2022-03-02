@@ -3,6 +3,7 @@
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\Site;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -54,5 +55,10 @@ Route::get("/contact", function () {
 // Route::match(["get", "post"], "/add-student", [StudentController::class, "myForm"]);
 Route::match(["get", "post"], "/add-product", [ProductsController::class, "addProducts"]);
 
-Route::get("/add-student", [StudentController::class, "addStudent"]);
-Route::post("/submit-student", [StudentController::class, "submitStudent"]);
+// Route::get("/add-student", [StudentController::class, "addStudent"]);
+// Route::post("/submit-student", [StudentController::class, "submitStudent"]);
+
+Route::get("/get-users", [Site::class, "getStudents"]);
+Route::get("/add-student", [Site::class, "insertStudent"]);
+Route::get("/update-student", [Site::class, "updateStudent"]);
+Route::get("/delete-student", [Site::class, "deleteStudent"]);
