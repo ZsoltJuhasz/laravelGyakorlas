@@ -62,3 +62,13 @@ Route::get("/get-users", [Site::class, "getStudents"]);
 Route::get("/add-student", [Site::class, "insertStudent"]);
 Route::get("/update-student", [Site::class, "updateStudent"]);
 Route::get("/delete-student", [Site::class, "deleteStudent"]);
+
+Route::get("/list-student", [StudentController::class, "listStudent"]);
+Route::get("/list-student-training-version", [StudentController::class, "listStudentTrainingVersion"]);
+Route::get("/list-org-email-list", [StudentController::class, "orgEmailList"]);
+Route::get("/list-java-courses", [StudentController::class, "listJavaCourses"]);
+
+Route::get("/insert-course", [StudentController::class, "insertCourse"]);
+Route::get("/update-course", [StudentController::class, "updateCourse"]);
+Route::get("/update-or-insert", [StudentController::class, "updateOrInsert"]);
+Route::get("/delete-course", [StudentController::class, "deleteCourse"]);
