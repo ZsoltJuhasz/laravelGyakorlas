@@ -3,6 +3,7 @@
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\Site;
 /*
 |--------------------------------------------------------------------------
@@ -72,3 +73,5 @@ Route::get("/insert-course", [StudentController::class, "insertCourse"]);
 Route::get("/update-course", [StudentController::class, "updateCourse"]);
 Route::get("/update-or-insert", [StudentController::class, "updateOrInsert"]);
 Route::get("/delete-course", [StudentController::class, "deleteCourse"]);
+
+Route::get("{local}/service", [ServiceController::class, "service"]); //a local az egy változó itt
